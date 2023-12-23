@@ -1,0 +1,290 @@
+<h1 align="center"> Basic JavaScript </h1>
+
+<h1> (1) What is JavaScript ?</h1>
+<h3> => a scripting or programming language that allows you to implement complex features on web pages. </h3>
+<h3> => every time a web page does more than just sit there and display static information for you to look at javascript.</h3>
+<h3> => Example : <!DOCTYPE html>
+    <html>
+    <head>
+      <title>JavaScript Example</title>
+      <script>
+        // JavaScript code
+        function changeText() {
+          // Get the element with the ID 'demo'
+          var element = document.getElementById('demo');
+    
+          // Change the text content
+          element.innerHTML = 'Hello, JavaScript!';
+        }
+      </script>
+    </head>
+    <body>
+    
+    <!-- HTML content -->
+    <h1>JavaScript Example</h1>
+    <p id="demo">This is a demonstration of JavaScript.</p>
+    
+    <!-- Button to trigger JavaScript function -->
+    <button onclick="changeText()">Click me</button>
+    
+    </body>
+    </html>
+    </h3> <br> <br> <br>
+
+    <h1> (2) What is the use of isNaN function ?</h1>
+    <h3> => the question "is the input functionally equivalent to NaN when used in a number context".</h3> <br> <br> <br>
+    
+    <h1> (3) What is negative Infinity ?</h1>
+    <h3> => In JavaScript, 'Infinity' is a special numeric value representing positive infinity. </h3>
+    <h3> => The 'Infinity' value in JavaScript represents a number that is greater than any other number.</h3> <br> <br> <br>
+
+    <h1> (4) Which company developed JavaScript ? </h1>
+    <h3> => JavaScript was developed by Netscape Communications Corporation. </h3>
+    <h3> => It was created by Brendan Eich in 1995 while he was working at Netscape.</h3>
+    <h3> =>  Initially named "Mocha," the language was later renamed to "LiveScript" and eventually became known as "JavaScript."</h3> <br> <br> <br>
+
+    <h1> (4) What are undeclared and undefined variables ?</h1>
+    <h3> => Undeclared Variables: An undeclared variable is a variable that has been used in code without being formally declared using a 'var', 'let', or 'const' keyword.</h3>
+    <h3> => When a variable is used without declaration, JavaScript will implicitly create a global variable in non-strict mode, which might lead to unexpected behavior and bugs in your code.</h3>
+
+    <h3> => Undefined Variables: An undefined variable is a variable that has been declared but not assigned any value. In JavaScript, if a variable is declared but not initialized, it holds the special value 'undefined; by default.</h3> <br> <br> <br> 
+
+    <h1> (5) What is the difference between ViewState and SessionState ?</h1>
+    <h3> => ViewState:
+        ViewState is a client-side state management technique used in ASP.NET web forms. It is designed to preserve the state of a server-side control or page across postbacks.
+        It stores the state of the page or control in a hidden field on the page itself. This hidden field is sent back and forth between the server and the client with each request and response.
+        ViewState is specific to a single page and maintains the state of controls or data within that particular page. It is useful for retaining information about controls' state between round-trips to the server. </h3>
+    <h3> => SessionState:
+        SessionState, on the other hand, is a server-side state management technique used to store user-specific information across multiple pages or requests for a particular user session.
+        It stores data on the server associated with a unique session ID for each user. This data persists throughout the user's interaction with the web application until the session ends (e.g., when the user logs out or after a period of inactivity).
+        SessionState is not limited to a single page but is accessible across multiple pages within the same session. It can store user-specific information like user preferences, shopping cart items, user authentication details.</h3>
+    <h3> => Scope: ViewState maintains state information for a specific web page, while SessionState retains data across multiple pages for a user session.</h3> 
+    <h3> => Storage Location: ViewState data is stored as a hidden field on the web page itself, whereas SessionState data is stored on the server.</h3>
+    <h3> => Size and Performance: ViewState tends to increase the size of the web page, affecting performance for larger amounts of data.</h3> <br> <br> <br>
+    
+    <h1> (6) What is === operator ? </h1>
+    <h3> => In JavaScript, the === operator is known as the "strict equality operator."</h3>
+    <h3> => It is used for comparing two values for equality without performing type coercion.</h3>
+    <h3> => It checks both the value and the data type of the operands being compared.</h3>
+    <h3> => Example :  console.log(5 === 5);   <br>    
+        console.log(5 === '5');     <br>
+        console.log(true === true); <br>
+        console.log(true === 1);    <br>
+        console.log('hello' === 'hello'); <br>
+        console.log(null === undefined);  <br>
+        console.log(0 === -0);     <br>
+        console.log(NaN === NaN);  </h3> <br> <br> <br>
+
+    <h1> (7) How can the style/class of an element be changed ? </h1>
+    <h3> => the style or class of an HTML element using JavaScript.</h3>   
+    <h3> => Example : Changing Style: <!DOCTYPE html>
+        <html>
+        <head>
+          <title>Change Style Example</title>
+          <style>
+            
+            .highlight {
+              color: red;
+              font-weight: bold;
+            }
+          </style>
+        </head>
+        <body>
+        
+        <p id="paragraph">This is a paragraph.</p>
+        <button onclick="changeStyle()">Change Style</button>
+        
+        <script>
+        function changeStyle() {
+          
+          var element = document.getElementById('paragraph');
+        
+          element.style.color = 'blue';
+          element.style.fontStyle = 'italic';
+          element.style.backgroundColor = 'lightgray';
+        }
+        </script>
+        
+        </body>
+        </html>
+        </h3>
+
+        <h3> Example : Changing Class: <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Change Class Example</title>
+              <style>
+                
+                .highlight {
+                  color: red;
+                  font-weight: bold;
+                }
+                .italic {
+                  font-style: italic;
+                }
+              </style>
+            </head>
+            <body>
+            
+            <p id="paragraph" class="highlight">This is a paragraph.</p>
+            <button onclick="changeClass()">Change Class</button>
+            
+            <script>
+           
+            function changeClass() {
+              
+              var element = document.getElementById('paragraph');
+            
+              element.classList.remove('highlight');
+              element.classList.add('italic');
+            }
+            </script>
+            
+            </body>
+            </html>
+            </h3> <br> <br> <br>
+
+    <h1> (8) How to read and write a file using JavaScript ?</h1> 
+    <h3> => the ability to read and write files directly from the user's file system in a web browser environment is restricted for security reasons.</h3>
+    <h3> => Example :  Read File : <!DOCTYPE html>
+        <html>
+        <head>
+          <title>File Reader Example</title>
+        </head>
+        <body>
+          <input type="file" id="fileInput">
+          <pre id="fileContents"></pre>
+        
+          <script>
+           
+            document.getElementById('fileInput').addEventListener('change', function(event) {
+              const file = event.target.files[0];
+              const reader = new FileReader();
+        
+              reader.onload = function(event) {
+                document.getElementById('fileContents').textContent = event.target.result;
+              };
+        
+              reader.readAsText(file);
+            });
+          </script>
+        </body>
+        </html>
+        </h3>  
+
+        <h3> Example : write File : <!DOCTYPE html>
+            <html>
+            <head>
+              <title>File Download Example</title>
+            </head>
+            <body>
+              <button id="downloadButton">Download Text File</button>
+            
+              <script>
+                
+                document.getElementById('downloadButton').addEventListener('click', function() {
+                  const textContent = 'This is the content of the file.';
+            
+                  const blob = new Blob([textContent], { type: 'text/plain' });
+                  const url = window.URL.createObjectURL(blob);
+            
+                  const a = document.createElement('a');
+                  a.href = url;
+                  a.download = 'example.txt';
+                  document.body.appendChild(a);
+                  a.click();
+            
+                  window.URL.revokeObjectURL(url);
+                  document.body.removeChild(a);
+                });
+              </script>
+            </body>
+            </html>
+            </h3> <br> <br> <br> 
+
+    <h1> (9) What are all the looping structures in JavaScript ?</h1>    
+    <h3> => For Loop : The for loop is used to execute a block of code a specified number of times.</h3>  
+    <h3>  Example :  // Using a for loop to print numbers from 1 to 5 <br>
+        for (let i = 1; i <= 5; i++) <br>
+        {
+          console.log(i);
+        }  </h3>  
+    <h3> => while loop: The 'while loop' is used to execute a block of code as long as a specified condition is true.</h3>    
+    <h3> Example : let i = 0;  <br>
+        while (i < 5) { <br>
+          console.log(i);  <br>
+          i++; <br>
+        }</h3>
+    <h3> => do...while loop : The 'do...while' loop is similar to the while loop, but it executes the code block once before checking the condition.</h3>  
+    <h3> Example : let i = 0; <br>
+        do {   <br> 
+          console.log(i);  <br>
+          i++;  <br>
+        } while (i < 5);</h3>
+    <h3> => for...in loop: The 'for...in' loop iterates over the properties of an object.</h3>   
+    <h3> Example : onst person = {  <br>
+        name: 'John',  <br>
+        age: 30,   <br>
+        gender: 'male'  <br>
+      };  <br>
+      
+      for (let key in person) {  <br>
+        console.log(key + ': ' + person[key]);  <br>
+      }</h3>
+    <h3> => for...of loop : The 'for...of' loop iterates over iterable objects like arrays, strings, maps, sets, etc., accessing their values directly.</h3>
+    <h3> Example : const fruits = ['apple', 'banana', 'orange'];  <br>
+
+        for (let fruit of fruits) {  <br>
+        console.log(fruit);  <br>
+       }</h3> <br> <br> <br>
+
+    <h1> (10) How can you convert the string of any base to an integer in JavaScript ?</h1>  
+    <h3> => The 'parseInt()'' function takes two parameters: the string to parse and the base of the numeral system used in the string.</h3>
+    
+    <h1> (11) What is the function of the delete operator ?</h1>
+    <h3> => In JavaScript, the delete operator is used to remove a property from an object or to delete an element from an array.</h3>
+    <h3> => Example : // Creating an object  <br>
+        let car = {  <br>
+          brand: 'Toyota',   <br>
+          model: 'Camry',  <br> 
+          year: 2022  <br>
+        };   <br>
+        
+        // Displaying the object before using delete  <br>  
+        console.log("Before delete:", car); <br>
+        
+        // Deleting the 'model' property from the 'car' object  <br>
+        delete car.model;  <br>
+        
+        // Displaying the object after using delete  <br>
+        console.log("After delete:", car);  <br>
+        </h3> <br> <br> <br>
+
+    <h1> (12) What are all the types of Pop up boxes available in JavaScript ?</h1>  
+    <h3> => Alert Box (alert()):
+
+        The 'alert()'' method displays a simple dialog box with a message and an "OK" button. <br>
+        It is commonly used to show an informative message or to get the user's attention.</h3>  
+    <h3> => Confirm Box (confirm()):
+
+        The 'confirm()'' method displays a dialog box with a message and two buttons: "OK" and "Cancel." <br>
+        It is used to ask the user for confirmation before proceeding.</h3>    
+    <h3> => Prompt Box (prompt()):
+
+        The 'prompt()' method displays a dialog box with a message, an input field for the user to enter data, and "OK" and "Cancel" buttons. <br>
+        It is used to prompt the user to enter some information.</h3>    <br> <br> <br>
+
+    <h1> (13) What is the use of Void (0) ?</h1> 
+    <h3> => 'void' is an operator that evaluates an expression and then returns 'undefined'.</h3>  
+    <h3> => The primary use of 'void(0)' is within the 'href' attribute of an anchor ('<a>') element to create an empty or "void" link that doesn't navigate to a new page or change the current page's URL when clicked. </h3> 
+    <h3> => Example : <a href="javascript:void(0);" onclick="myFunction()">Click me</a>
+    </h3> <br> <br> <br> 
+
+    <h1> (14) How can a page be forced to load another page in JavaScript ?</h1>
+    <h3> => In JavaScript, you can redirect the browser to another page using the 'window.location' object. Changing the 'window.location' property to a new URL will make the browser load the specified page.</h3>
+
+    <h1> (15) What are the disadvantages of using innerHTML in JavaScript ?</h1>
+    <h3> => Security Risks (Cross-Site Scripting - XSS): Assigning strings directly to 'innerHTML' that contain user-generated or untrusted content can pose security risks such as Cross-Site Scripting (XSS). If the content includes malicious scripts, they might be executed when setting 'innerHTML', potentially compromising the security of the web application.</h3>
+    <h3> => String Parsing and Serialization: The process of converting strings to DOM elements and vice versa when using 'innerHTML' can lead to parsing and serialization overheads, especially when dealing with complex or nested HTML structures.</h3>
+    <h3> => ompatibility and Browser Quirks: The behavior of 'innerHTML' might vary slightly across different browsers and might have certain quirks or inconsistencies, potentially causing unexpected behavior in some cases.</h3>
+    
